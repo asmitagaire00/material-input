@@ -1,0 +1,68 @@
+body {
+  background-color: lemonchiffon;
+}
+.form-content {
+  position: relative;
+  transition: 0.2s all ease-in;
+  font-size: 20px;
+  width: 300px;
+  margin: 100px;
+}
+
+.form-label {
+  font-size: 100%;
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  transition: 0.2s all ease-in;
+}
+
+.form-input {
+  display: block;
+  padding: 10px 10px 10px 5px;
+  width: 100%;
+  font-size: 100%;
+  transition: 0.2s all ease-in;
+  outline: none;
+  border-style: none none solid none;
+}
+
+.form-input::placeholder {
+  color: transparent;
+}
+
+.form-input:focus ~ label,
+.form-input:valid ~ label {
+  top: -20px;
+  font-size: 15px;
+}
+
+.bar {
+  width: 316px;
+  position: relative;
+  display: block;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 2px;
+  background-color: rgb(104, 9, 172);
+  transition: 0.3s ease all;
+}
+
+.bar::before {
+  left: 50%;
+}
+
+.bar::after {
+  right: 50%;
+}
+
+.form-input:focus ~ .bar::before,
+.form-input:focus ~ .bar::after {
+  width: 50%;
+}
